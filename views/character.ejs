@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs', { active: 'Characters'}) %>
+  <div class="container text-center">
+  <h1>Character Info</h1>
+  <img src="<%= image %>" class="img-thumbnail">
+<!--     Displays first result -->
+    <h2><%= character[0].name %></h2>
+    <p><%= character[0].race %></p>
+    <br>
+    <a href="<%= character[0].wikiUrl %>"><button class="btn btn-success">Wiki Page</button></a>
+    <br>
+  </div>
+<%- include('partials/footer.ejs') %>

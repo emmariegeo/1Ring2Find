@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs', { active: 'Random Quote'}) %> 
+    <div class="container text-center">
+    <h1>Random Quote</h1>
+      <h5>A random quote from Lord of the Rings.</h3>
+      <img src="<%= image %>" class="img-thumbnail">
+      <figure class="text-center">
+    <blockquote class="blockquote">
+    <p><%= dialog %></p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    <%= char %> in <cite title="Source Title"><%= movie %></cite>
+  </figcaption>
+</figure>
+    </div>
+
+<%- include('partials/footer.ejs') %>

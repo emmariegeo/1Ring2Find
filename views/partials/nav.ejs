@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">1Ring2Find</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+<!-- Add active classes and aria-current to list item if active -->
+        <li class="nav-item">
+          <a class="nav-link <% if ( active == 'Home') { %> active" aria-current="page" <% } else { %>"<% } %> href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <% if ( active == 'Random Quote') { %> active" aria-current="page" <% } else { %>"<% } %> href="/quote">Random Quote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <% if ( active == 'Movies') { %> active" aria-current="page" <% } else { %>"<% } %> href="/movies">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <% if ( active == 'Books') { %> active" aria-current="page" <% } else { %>"<% } %> href="/books">Books</a>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link <% if ( active == 'Characters') { %> active dropdown-toggle" aria-current="page" <% } else { %>dropdown-toggle"<% } %> href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Characters
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/character?name=Gandalf">Gandalf</a></li>
+            <li><a class="dropdown-item" href="/character?name=Frodo%20Baggins">Frodo Baggins</a></li>
+            <li><a class="dropdown-item" href="/character?name=Legolas">Legolas</a></li>
+            <li><a class="dropdown-item" href="/character?name=Galadriel">Galadriel</a></li>
+            <li><a class="dropdown-item" href="/character?name=Arwen">Arwen</a></li>
+            <li><a class="dropdown-item" href="/character?name=Aragorn%20II%20Elessar">Aragorn</a></li>
+            <li><a class="dropdown-item" href="/character?name=Gimli">Gimli</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

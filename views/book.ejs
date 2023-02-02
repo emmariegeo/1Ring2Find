@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs', { active: 'Books'}) %>
+    <div class="container text-center">
+      <h1><%= bookName %></h1>
+      <h2>Table of Contents</h2>
+      <!--       Display book chapters -->
+      <ol class="list-group list-group-numbered">
+        <% chapters.forEach( (chapter) => { %>
+        <li class="list-group-item"><%= chapter.chapterName %></li>
+        <% }); %>
+      </ol>
+    </div>
+
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs', { active: 'Movies'}) %>
+    <div class="container text-center">
+    <h1>Movies</h1>
+      <h5>A list of movies in the Lord of the Rings and the Hobbit collections.</h5>
+    <div class="row row-cols-1 row-cols-md-3 p-4 g-4">
+<!-- Remove the 2 series from results -->
+      <% movieList.forEach( (movie) => { if (movie.name !== 'The Lord of the Rings Series' && movie.name !== 'The Hobbit Series') {%>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/movie/<%= movie._id %>.png" class="card-img-top" alt="<%= movie.name %>">
+            <div class="card-body d-flex flex-column justify-content-end align-content-center"">
+              <h5 class="card-title"><%= movie.name %></h5>
+            </div>
+          </div>
+        </div>
+      <% }}); %>
+      </div>
+    </div>
+
+
+<%- include('partials/footer.ejs') %>

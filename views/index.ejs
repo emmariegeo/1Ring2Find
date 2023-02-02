@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs', { active: 'Home'}) %>
+    <div class="container text-center">
+    <h1>1Ring2Find</h1>
+      <p>A place to find information on the Lord of the Rings universe.</p>
+      <div class="d-grid gap-2">
+        <a href="/quote" class="btn btn-success">Get a random quote.</a>
+        <a href="/movies" class="btn btn-success">View movie list.</a>
+        <a href="/books" class="btn btn-success">View LOTR book list.</a>
+        <br>
+        <p> OR </p>
+        <!-- Search character by name -->
+        <form action="/character" method="GET">
+          <label for="character-input" class="form-label"><h2>Find a character by name:</h2></label>
+          <div class="d-flex gap-2">
+            <input id="character-input" class="form-control" type="text" name="name">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+          <% if (searchError) { %>
+            <div class="text-danger">
+              Must enter a value to search.
+            </div>
+          <% } %>
+          </form>
+      </div>
+    </div>
+<%- include('partials/footer.ejs') %>
