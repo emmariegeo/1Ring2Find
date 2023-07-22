@@ -1,8 +1,8 @@
-const express = require('express');
-const fetch = require('node-fetch');
-const { Headers } = require('node-fetch');
+import express from 'express';
+import fetch from 'node-fetch';
+import { Headers } from 'node-fetch';
 // https://www.npmjs.com/package/random-lotr-movie-quote
-const randomQuote = require('random-lotr-movie-quote');
+import randomQuote from 'random-lotr-movie-quote';
 const token = process.env['token'];
 const app = express();
 
