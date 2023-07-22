@@ -8,4 +8,4 @@ An app that pulls information on the Lord of the Rings series. The [Random LOTR 
 The goal of this project was to create a website using Express.js that fetches information from a Node Package and from a Web API.
 
 ## Deployment
-[View in a Node.js environment on Replit](https://hw4.emmageorge2.repl.co/)
+[View Heroku Deployment](https://one-ring2find-ba96a4f87ebf.herokuapp.com/)
